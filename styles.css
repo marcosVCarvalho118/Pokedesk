@@ -1,0 +1,170 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+
+    /* 🔴 FUNDO POKÉDEX */
+    background: linear-gradient(135deg, #ff3b3b, #b30000);
+
+    color:white;
+    min-height:100vh;
+}
+
+/* 🔴 HEADER ESTILIZADO */
+header{
+    background: linear-gradient(135deg, #b30000, #ff3b3b);
+
+    padding:25px 20px;
+
+    text-align:center;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.4);
+
+    border-bottom:4px solid rgba(255,255,255,0.2);
+}
+
+header h1{
+    font-size:clamp(2rem, 5vw, 3rem);
+    font-weight:bold;
+    letter-spacing:2px;
+    color:white;
+    text-shadow:2px 2px 8px rgba(0,0,0,0.5);
+}
+
+header p{
+    margin-top:8px;
+    font-size:1rem;
+    color:#ffe5e5;
+}
+
+/* DETALHE DECORATIVO */
+header::after{
+    content:"";
+    display:block;
+
+    width:60px;
+    height:6px;
+
+    background:white;
+
+    margin:15px auto 0;
+
+    border-radius:10px;
+
+    opacity:0.8;
+}
+
+/* CONTAINER */
+#pokemon-container{
+    width:90%;
+    max-width:1000px;
+    margin:40px auto;
+
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap:20px;
+
+    justify-items:center;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1000px){
+    #pokemon-container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 800px){
+    #pokemon-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px){
+    #pokemon-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px){
+    #pokemon-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CARD */
+.card{
+    width:180px;
+    min-height:260px;
+
+    border-radius:20px;
+    padding:15px;
+
+    color:white;
+
+    /* efeito vidro */
+    background:rgba(0,0,0,0.3);
+
+    backdrop-filter: blur(6px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.4);
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+
+    transition:.3s;
+}
+
+/* HOVER */
+.card:hover{
+    transform:translateY(-8px) scale(1.03);
+    box-shadow:0 12px 30px rgba(0,0,0,.5);
+}
+
+/* IMAGEM */
+.card img{
+    width:100%;
+    max-width:120px;
+    height:auto;
+    object-fit:contain;
+}
+
+/* NOME */
+.card h2{
+    text-align:center;
+    text-transform:capitalize;
+    font-size:1.2rem;
+    margin:10px 0;
+}
+
+/* TIPO */
+.tipo{
+    background:rgba(255,255,255,.2);
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:0.8rem;
+    margin-bottom:10px;
+    text-align:center;
+}
+
+/* INFO */
+.info{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.info p{
+    background:rgba(0,0,0,.35);
+    padding:5px;
+    border-radius:6px;
+    font-size:0.8rem;
+}
