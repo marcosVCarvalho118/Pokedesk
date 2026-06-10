@@ -5,7 +5,7 @@ function getStat(stats, nome){
 function PokemonCard({ info, cores }) {
   const tipoPrincipal = info.types[0].type.name;
   const cor = cores[tipoPrincipal] ?? "#555";
-
+  
   const imagem =
     info.sprites?.other?.["official-artwork"]?.front_default ||
     info.sprites?.front_default ||
