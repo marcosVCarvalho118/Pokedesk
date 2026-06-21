@@ -1,16 +1,97 @@
-# React + Vite
+📦 PokeDesk
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+📖 Descrição
 
-Currently, two official plugins are available:
+O PokeDesk é uma aplicação web desenvolvida em React que consome a API pública PokéAPI para listar e exibir informações detalhadas de Pokémons.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A aplicação realiza requisições dinâmicas para buscar dados de até 100 Pokémons, exibindo-os em cards com estilização baseada no tipo de cada Pokémon. O projeto demonstra conceitos importantes de React como componentização, uso de hooks e consumo de API.
 
-## React Compiler
+🚀 Tecnologias
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Este projeto foi desenvolvido com:
 
-## Expanding the ESLint configuration
+⚛️ React 19 – Biblioteca principal
+⚡ Vite – Build tool moderna e rápida
+🌐 JavaScript (ESModules) – Lógica da aplicação
+🎨 HTML5 & CSS3 – Estrutura e estilos
+🔄 Fetch API – Consumo da API externa
+🧠 React Hooks
+useState
+useEffect
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+▶️ Como Rodar
+1. Clone o repositório
+git clone https://github.com/seu-usuario/pokedesk.git
+
+2. Acesse a pasta
+cd pokedesk
+
+3. Instale as dependências
+npm install
+
+4. Rode o projeto
+npm run dev
+
+5. Acesse no navegador
+http://localhost:5173
+
+✨ Funcionalidades
+🧩 Lista de Pokémons com Componentes React
+Renderização dinâmica usando o componente PokemonCard
+Lista de até 100 Pokémons
+Componentização reutilizável
+
+🔗 Consumo de API com useEffect
+
+Requisição para:
+https://pokeapi.co/api/v2/pokemon?limit=100
+Carregamento automático ao iniciar a aplicação
+Uso de Promise.all para buscar detalhes individuais
+Tratamento de:
+Loading (Carregando...)
+Erro (Erro ao carregar dados)
+
+🎨 Estilização Dinâmica por Tipo
+
+Cada Pokémon recebe cor baseada no tipo
+Sistema de cores definido no objeto cores dentro do App.jsx
+
+📁 Estrutura do Projeto
+
+Pokedesk-main/
+
+│── public/
+│   ├── favicon.svg
+│   ├── icons.svg
+│
+│── src/
+│   ├── assets/
+│   │   ├── hero.png
+│   │   ├── react.svg
+│   │   ├── vite.svg
+│
+│   ├── components/
+│   │   ├── PokemonCard.jsx
+│
+│   ├── App.jsx
+│   ├── App.css
+│   ├── styles.css
+│   ├── index.css
+│   ├── main.jsx
+│
+│── index.html
+│── package.json
+│── vite.config.js
+
+🧠 Conceitos Aplicados
+
+Componentização com React
+Hooks (useState, useEffect)
+Consumo de API REST
+Manipulação de múltiplas requisições assíncronas
+Renderização condicional (loading/erro)
+Estilização baseada em dados dinâmicos
+
+👨‍💻 Autor
+
+Desenvolvido por Marcos Vinícius
